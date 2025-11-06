@@ -1,0 +1,22 @@
+using System;
+
+public class Exercise3
+{
+    public static void Main(string[] args)
+    {
+        
+        // Ввод числа
+        Console.Write("Введите число: ");
+        double number = Convert.ToDouble(Console.ReadLine());
+        
+        // Проверка условия
+        if (number == 5 || number == 10)
+        {
+            Console.WriteLine("Число либо равно 5, либо равно 10.");
+        }
+        else
+        {
+            Console.WriteLine("Неизвестное число.");
+        }
+    }
+}
