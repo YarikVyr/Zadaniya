@@ -1,0 +1,38 @@
+using System;
+
+public class Exercise4
+{
+    public static void Main(string[] args)
+    {
+        
+        // Ввод суммы вклада
+        Console.Write("Введите сумму вклада: ");
+        double initialDeposit = Convert.ToDouble(Console.ReadLine()); 
+        
+        double interestRate = 0.0;
+        
+        // Определение процентной ставки
+        if (initialDeposit < 100)
+        {
+            interestRate = 0.05; // 5%
+        }
+        else if (initialDeposit >= 100 && initialDeposit <= 200)
+        {
+            interestRate = 0.07; // 7%
+        }
+        else
+        {
+            interestRate = 0.10; // 10%
+        }
+        
+        // Расчет начисленных процентов и итоговой суммы
+        double accruedInterest = initialDeposit * interestRate;
+        double finalDeposit = initialDeposit + accruedInterest;
+        
+        // Вывод результатов
+        Console.WriteLine($"\nСумма вклада: {initialDeposit:F2}");
+        Console.WriteLine($"Начисленный процент: {interestRate * 100}%");
+        Console.WriteLine($"Начислено процентов: {accruedInterest:F2}");
+        Console.WriteLine($"Итоговая сумма вклада с процентами: {finalDeposit:F2}");
+    }
+}
